@@ -168,6 +168,22 @@ public class Database {
 		
 	}
 	
+	public boolean CheckRecordExisted(String date)
+	{
+		try {
+			 Statement st = connect.createStatement();
+	         ResultSet res = st.executeQuery("SELECT * FROM xo_so_truyen_thong_mb WHERE date="+date);
+	        
+			if (res.next()){
+				return true;
+			}
+		 } catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return false;
+		 }
+		return false;
+	}
 	
 	
 	public boolean updateQuery(String sql) {

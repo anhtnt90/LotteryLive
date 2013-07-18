@@ -204,9 +204,9 @@ public class XosoMBCrawler extends TimerTask {
 					.timeout(TIME_OUT).get();
 			System.out.println("this.url" + this.url);
 		//	doc = Jsoup.parse(new URL(url).openStream(), "UTF-8", url);
-			//System.out.println("content start >>>");
-			////System.out.println(doc.html());
-			//System.out.println("content end >>>");
+			System.out.println("content start >>>");
+			System.out.println(doc.html());
+			System.out.println("content end >>>");
 			doc.outputSettings().charset("UTF-8");
 			
 			
@@ -315,13 +315,21 @@ public class XosoMBCrawler extends TimerTask {
 		return sb.toString();
 	}
 	
+	
+	
 	public String insertXosoSql(String date, String data) {
 //		data = data.replaceAll("\"", "x");
 //		data = data.replaceAll("x", "\\\"");
-		String sql = "insert into xo_so_truyen_thong_mb (date, result_json) values " +
+		String sql ="";
+		if(!db.CheckRecordExisted(date)){
+			sql= "insert into xo_so_truyen_thong_mb (date, result_json) values " +
 				"(\"" + date + "\", \"" + data + 
 				"\")";
-		
+		}
+		else
+		{
+			sql = "UPDATE xo_so_truyen_thong_mb SET result_json='"+data+"' WHERE date='"+date+"'";
+		}
 		System.out.println(sql);
 		try {
 			db.createPreparedStatement(date, data);
@@ -506,7 +514,7 @@ public class XosoMBCrawler extends TimerTask {
 				SaveConfig();	
 			}
 			try {
-				Thread.sleep(1000);
+				Thread.sleep(5000);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

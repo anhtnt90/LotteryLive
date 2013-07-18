@@ -53,6 +53,8 @@ public class XosoMBCrawler extends TimerTask {
 	private final static String SEMICOLON = ";";
 
 	private static final int VALID_XOSO_LENGTH = 27;
+	private final static String SEPERATOR = "-"; 
+	
 	
 	long MILLISECS_PER_DAY = 24 * 60 * 60 * 1000;
 
@@ -110,7 +112,9 @@ public class XosoMBCrawler extends TimerTask {
 						this.url = url+ tmp;
 						this.date = standard.format(cal.getTime());
 						System.out.println("this.date " +this.date);
-						run();
+						startDB();
+						Processing();
+						stopDB();
 						lastestDate = tmp;
 						cal.add(Calendar.DATE,1);
 						
@@ -279,28 +283,28 @@ public class XosoMBCrawler extends TimerTask {
 					break;
 				case 3: // DB
 					sb.append("\"C\" : ");
-					sb.append("\"" + list[i] + ";" + list[++i] +"\"");
+					sb.append("\"" + list[i] + SEPERATOR + list[++i] +"\"");
 					break;
 				case 4: // DB
 					sb.append("\"D\" : ");
-					sb.append("\"" + list[i] + ";" + list[++i] +";" + list[++i] +";" + list[++i] +";" + list[++i] +";" + list[++i] +"\"");
+					sb.append("\"" + list[i] + SEPERATOR + list[++i] +SEPERATOR + list[++i] +SEPERATOR + list[++i] +SEPERATOR + list[++i] +SEPERATOR + list[++i] +"\"");
 					break;
 				case 5: // DB
 					sb.append("\"E\" : ");
-					sb.append("\"" + list[i] + ";" + list[++i] +";" + list[++i] +";" + list[++i] +"\"");
+					sb.append("\"" + list[i] + SEPERATOR + list[++i] +SEPERATOR + list[++i] + SEPERATOR + list[++i] +"\"");
 					break;
 				case 6: // DB
 					sb.append("\"F\" : ");
-					sb.append("\"" + list[i] + ";" + list[++i] +";" + list[++i] +";" + list[++i] +";" + list[++i] +";" + list[++i] +"\"");
+					sb.append("\"" + list[i] + SEPERATOR + list[++i] +SEPERATOR+ list[++i] +SEPERATOR + list[++i] +SEPERATOR + list[++i] +SEPERATOR + list[++i] +"\"");
 					break;
 					
 				case 7: // DB
 					sb.append("\"G\" : ");
-					sb.append("\"" + list[i] + ";" + list[++i] +";" + list[++i] +"\"");
+					sb.append("\"" + list[i] + SEPERATOR + list[++i] +SEPERATOR + list[++i] +"\"");
 					break;
 				case 8: // DB
 					sb.append("\"H\" : ");
-					sb.append("\"" + list[i] + ";" + list[++i] +";" + list[++i] +";" + list[++i] +"\"");
+					sb.append("\"" + list[i] +SEPERATOR  + list[++i] +SEPERATOR + list[++i] +SEPERATOR + list[++i] +"\"");
 					break;
 				default: 
 					break;

@@ -16,6 +16,7 @@ public class TestLogger {
 		logger.info("info");
 		logger.warn("warning");
 		logger.error("error");
+		
 	}
 
 }

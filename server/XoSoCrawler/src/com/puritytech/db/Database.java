@@ -18,13 +18,19 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import org.apache.log4j.Logger;
+
 import com.mysql.jdbc.PreparedStatement;
+import com.puritytech.crawler.log.IXLogger;
+import com.puritytech.crawler.xs.XosoMBCrawler;
 
 /**
  * @author khanhle
  * 
  */
 public class Database {
+	private static final Logger logger = new IXLogger().getLogger(Database.class.getName());
+	
 	// product category
 	public final static int EAT_DRINK = 1;
 	public final static int TRAVEL = 2;
@@ -59,6 +65,7 @@ public class Database {
 		dbname = "xs";
 		username = "root";
 		password = "";
+		logger.info("initialize Database");
 	}
 	
 	
@@ -118,13 +125,13 @@ public class Database {
 			connect = DriverManager
 					.getConnection("jdbc:mysql://" + this.host + "/" + this.dbname,this.username,this.password);
 			
-			System.out.println("Successfully connect to: " + connect.toString());
+			logger.info("Successfully connect to: " + connect.toString());
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			logger.error(e.getMessage(), e);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			logger.error(e.getMessage(), e);
 		}
 
 	}
@@ -135,7 +142,7 @@ public class Database {
 			statement = connect.createStatement();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			logger.error(e.getMessage(), e);
 		}
 	}
 
@@ -162,7 +169,7 @@ public class Database {
 			return true;
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			logger.error(e.getMessage(), e);
 		}
 		return false;
 		
@@ -176,7 +183,7 @@ public class Database {
 			return statement.execute(sql);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			logger.error(e.getMessage(), e);
 		}
 		return false;
 		
@@ -211,7 +218,7 @@ public class Database {
 
 		System.out.println("Table: " + resultSet.getMetaData().getTableName(1).toUpperCase());
 		for (int i = 1; i <= resultSet.getMetaData().getColumnCount(); i++) {
-			System.out.println("Column " + i + " "
+			logger.debug("Column " + i + " "
 					+ resultSet.getMetaData().getColumnName(i));
 		}
 	}
@@ -224,7 +231,7 @@ public class Database {
 			writeMetaData(resultSet);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			logger.error(e.getMessage(), e);
 		}
 	      
 	}
@@ -248,7 +255,7 @@ public class Database {
 				connect.close();
 			}
 		} catch (Exception e) {
-			e.printStackTrace();
+			logger.error(e.getMessage(), e);
 		}
 	}
 	
@@ -268,7 +275,7 @@ public class Database {
 		db.testConnection();
 		db.close();
 		
-		System.out.println(Database.getDateTime());
+		logger.debug(Database.getDateTime());
 		
 	}
 

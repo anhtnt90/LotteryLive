@@ -1,3 +1,4 @@
-13-07-19 09:35:14.240 v [main] com.puritytech.crawler.log.TestLogger, line 16  INFO  :: info
-13-07-19 09:35:14.241 v [main] com.puritytech.crawler.log.TestLogger, line 17  WARN  :: warning
-13-07-19 09:35:14.241 v [main] com.puritytech.crawler.log.TestLogger, line 18  ERROR  :: error
+13-07-19 09:47:21.402 v [main] com.puritytech.crawler.log.TestLogger, line 15  DEBUG  :: debuging
+13-07-19 09:47:21.405 v [main] com.puritytech.crawler.log.TestLogger, line 16  INFO  :: info
+13-07-19 09:47:21.405 v [main] com.puritytech.crawler.log.TestLogger, line 17  WARN  :: warning
+13-07-19 09:47:21.406 v [main] com.puritytech.crawler.log.TestLogger, line 18  ERROR  :: error

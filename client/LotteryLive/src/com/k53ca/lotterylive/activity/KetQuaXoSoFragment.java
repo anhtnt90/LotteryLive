@@ -18,7 +18,7 @@ import com.k53ca.lotterylive.utils.Constants;
 import com.k53ca.lotterylive.utils.Constants.TYPE_XOSO;
 
 public class KetQuaXoSoFragment extends MyParentFragment {
-	private static final String TAG = "KetQauXoSoFragment";
+	private static final String TAG = "KetQuaXoSoFragment";
 	// ==========================================================
 	// 9 prizes: special at 0 position, first: 1 position, and so on
 	// ==========================================================
@@ -171,10 +171,10 @@ public class KetQuaXoSoFragment extends MyParentFragment {
 	 */
 	public static KetQuaXoSoFragment newInstance(TYPE_XOSO typeXoso,
 			String dateKetQua) {
-		KetQuaXoSoFragment ketQauXoSoFragment = new KetQuaXoSoFragment();
-		ketQauXoSoFragment.setDateKetQua(dateKetQua);
-		ketQauXoSoFragment.setTypeXoSo(typeXoso);
-		return ketQauXoSoFragment;
+		KetQuaXoSoFragment ketQuaXoSoFragment = new KetQuaXoSoFragment();
+		ketQuaXoSoFragment.setDateKetQua(dateKetQua);
+		ketQuaXoSoFragment.setTypeXoSo(typeXoso);
+		return ketQuaXoSoFragment;
 	}
 
 	public void setTypeXoSo(TYPE_XOSO xosoType) {

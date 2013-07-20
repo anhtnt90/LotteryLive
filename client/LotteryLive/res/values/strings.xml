@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Xổ Số K53CA</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="main_activity_btn1">Miền Bắc</string>
+    <string name="main_activity_btn2">Miền Trung</string>
+    <string name="main_activity_btn3">Miền Nam</string>
+    <string name="firsttab_xosomienbac">Xổ số Miền Bắc</string>
+    <string name="secondtab_xosomientrung">Xổ số Miền Trung</string>
+    <string name="thirdtab_xosomiennam">Xổ số Miền Nam</string>
+    <string name="giai_dac_biet">Giải ĐB</string>
+    <string name="giai_nhat">Giải Nhất</string>
+    <string name="second_prize">Giải Nhì</string>
+    <string name="third_prize">Giải Ba</string>
+    <string name="fourth_prize">Giải Tư</string>
+    <string name="five_prize">Giải Năm</string>
+    <string name="six_prize">Giải Sáu</string>
+    <string name="seven_prize">Giải Bảy</string>
+    <string name="eigh_prize">Giải Tám</string>
+
+</resources>

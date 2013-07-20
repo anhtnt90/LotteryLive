@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    tools:ignore="HardcodedText,UselessParent,ContentDescription,ObsoleteLayoutParam" >
+
+    <RelativeLayout
+        android:id="@+id/layout_logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#072D52"
+        android:gravity="center_vertical" >
+
+        <ImageView
+            android:id="@+id/img_logo"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/icon_xoso" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/img_logo"
+            android:gravity="center_vertical"
+            android:text="Kết quả xổ số"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_logo"
+        android:orientation="horizontal" >
+
+        <fragment
+            android:id="@+id/main_rl_rootfrag"
+            android:name="com.k53ca.lotterylive.activity.MienBacFragment"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent" >
+        </fragment>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/main_ll_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true" >
+
+        <Button
+            android:id="@+id/main_btn_first"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/menubar_heigh"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/tabbar_select"
+            android:text="@string/main_activity_btn1"
+            android:textColor="#ffffff"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="@dimen/menubar_heigh"
+            android:background="#0f0f0f" />
+
+        <Button
+            android:id="@+id/main_btn_second"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/menubar_heigh"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/tabbar_unselect"
+            android:text="@string/main_activity_btn2"
+            android:textColor="#ffffff"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="@dimen/menubar_heigh"
+            android:background="#0f0f0f" />
+
+        <Button
+            android:id="@+id/main_btn_third"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/menubar_heigh"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/tabbar_unselect"
+            android:text="@string/main_activity_btn3"
+            android:textColor="#ffffff"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/main_ll_buttons"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ffffff" />
+    </LinearLayout>
+
+</RelativeLayout>

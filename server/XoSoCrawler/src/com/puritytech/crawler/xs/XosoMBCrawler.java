@@ -56,7 +56,7 @@ public class XosoMBCrawler extends TimerTask {
 	private static final int VALID_XOSO_LENGTH = 27;
 
 
-=======
+
 	private final static String SEPERATOR = "-"; 
 	
 	

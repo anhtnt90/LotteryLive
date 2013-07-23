@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tvXoSoType"
+            style="@style/red_text_bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:text="@string/firsttab_xosomienbac" />
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Thứ/Ngày Tháng Năm" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/boder3"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FAF0E6"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/giai_dac_biet"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:background="@color/boder_color" />
+
+            <TextView
+                android:id="@+id/prize0"
+                style="@style/red_text_bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="5dp"
+                android:text="00000" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/giai_nhat"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:background="@color/boder_color" />
+
+            <TextView
+                android:id="@+id/prize1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="5dp"
+                android:text="00000" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FAF0E6"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/second_prize"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:background="@color/boder_color" />
+
+            <TextView
+                android:id="@+id/prize2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="5dp"
+                android:text="00000" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/third_prize"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:background="@color/boder_color" />
+
+            <TextView
+                android:id="@+id/prize3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="5dp"
+                android:text="00000" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FAF0E6"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/fourth_prize"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:background="@color/boder_color" />
+
+            <TextView
+                android:id="@+id/prize4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="5dp"
+                android:text="00000" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/five_prize"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:background="@color/boder_color" />
+
+            <TextView
+                android:id="@+id/prize5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="5dp"
+                android:text="00000" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FAF0E6"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/six_prize"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:background="@color/boder_color" />
+
+            <TextView
+                android:id="@+id/prize6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="5dp"
+                android:text="00000" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/seven_prize"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:background="@color/boder_color" />
+
+            <TextView
+                android:id="@+id/prize7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="5dp"
+                android:text="00000" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/eightPrizeRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/eigh_prize"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:background="@color/boder_color" />
+
+            <TextView
+                android:id="@+id/prize8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="5dp"
+                android:text="00000" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/boder_color" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -2,3 +2,121 @@
 13-07-19 09:47:21.405 v [main] com.puritytech.crawler.log.TestLogger, line 16  INFO  :: info
 13-07-19 09:47:21.405 v [main] com.puritytech.crawler.log.TestLogger, line 17  WARN  :: warning
 13-07-19 09:47:21.406 v [main] com.puritytech.crawler.log.TestLogger, line 18  ERROR  :: error
+13-07-19 10:41:49.260 v [main] com.puritytech.crawler.log.TestLogger, line 27  DEBUG  :: debuging
+13-07-19 10:41:49.314 v [main] com.puritytech.crawler.log.TestLogger, line 28  INFO  :: info
+13-07-19 10:41:49.334 v [main] com.puritytech.crawler.log.TestLogger, line 29  WARN  :: warning
+13-07-19 10:41:49.335 v [main] com.puritytech.crawler.log.TestLogger, line 30  ERROR  :: error
+13-07-19 10:42:46.202 v [main] com.puritytech.crawler.log.TestLogger, line 27  DEBUG  :: debuging
+13-07-19 10:42:46.205 v [main] com.puritytech.crawler.log.TestLogger, line 28  INFO  :: info
+13-07-19 10:42:46.205 v [main] com.puritytech.crawler.log.TestLogger, line 29  WARN  :: warning
+13-07-19 10:42:46.205 v [main] com.puritytech.crawler.log.TestLogger, line 30  ERROR  :: error
+13-07-19 10:43:38.538 v [main] com.puritytech.crawler.log.TestLogger, line 27  DEBUG  :: debuging
+13-07-19 10:43:38.541 v [main] com.puritytech.crawler.log.TestLogger, line 28  INFO  :: info
+13-07-19 10:43:38.541 v [main] com.puritytech.crawler.log.TestLogger, line 29  WARN  :: warning
+13-07-19 10:43:38.542 v [main] com.puritytech.crawler.log.TestLogger, line 30  ERROR  :: error
+13-07-19 10:44:34.966 v [main] com.puritytech.crawler.log.TestLogger, line 27  DEBUG  :: debuging
+13-07-19 10:44:34.969 v [main] com.puritytech.crawler.log.TestLogger, line 28  INFO  :: info
+13-07-19 10:44:34.969 v [main] com.puritytech.crawler.log.TestLogger, line 29  WARN  :: warning
+13-07-19 10:44:34.969 v [main] com.puritytech.crawler.log.TestLogger, line 30  ERROR  :: error
+13-07-19 10:49:01.726 v [main] com.puritytech.crawler.log.TestLogger, line 30  DEBUG  :: debuging
+13-07-19 10:49:01.729 v [main] com.puritytech.crawler.log.TestLogger, line 31  INFO  :: info
+13-07-19 10:49:01.730 v [main] com.puritytech.crawler.log.TestLogger, line 32  WARN  :: warning
+13-07-19 10:49:01.730 v [main] com.puritytech.crawler.log.TestLogger, line 33  ERROR  :: error
+13-07-19 10:50:45.658 v [main] com.puritytech.crawler.log.TestLogger, line 30  DEBUG  :: debuging
+13-07-19 10:50:45.661 v [main] com.puritytech.crawler.log.TestLogger, line 31  INFO  :: info
+13-07-19 10:50:45.662 v [main] com.puritytech.crawler.log.TestLogger, line 32  WARN  :: warning
+13-07-19 10:50:45.663 v [main] com.puritytech.crawler.log.TestLogger, line 33  ERROR  :: error
+13-07-23 16:11:53.140 v [main] com.puritytech.db.Database, line 68  INFO  :: initialize Database
+13-07-23 16:11:53.491 v [main] com.puritytech.db.Database, line 128  INFO  :: Successfully connect to: com.mysql.jdbc.JDBC4Connection@1cde100
+13-07-23 16:17:38.450 v [main] com.puritytech.db.Database, line 68  INFO  :: initialize Database
+13-07-23 16:17:38.691 v [main] com.puritytech.db.Database, line 128  INFO  :: Successfully connect to: com.mysql.jdbc.JDBC4Connection@1cde100
+13-07-23 16:17:38.725 v [main] com.puritytech.crawler.xs.XosoMBCrawler, line 59  INFO  :: current date: Tue Jul 23 16:17:38 ICT 2013
+13-07-23 16:19:42.791 v [main] com.puritytech.db.Database, line 68  INFO  :: initialize Database
+13-07-23 16:19:43.032 v [main] com.puritytech.db.Database, line 128  INFO  :: Successfully connect to: com.mysql.jdbc.JDBC4Connection@1cde100
+13-07-23 16:19:43.034 v [main] com.puritytech.crawler.xs.XosoMBCrawler, line 61  INFO  :: current date: Tue Jul 23 16:19:43 ICT 2013
+13-07-23 16:19:58.567 v [main] com.puritytech.db.Database, line 68  INFO  :: initialize Database
+13-07-23 16:19:58.837 v [main] com.puritytech.db.Database, line 128  INFO  :: Successfully connect to: com.mysql.jdbc.JDBC4Connection@16f0472
+13-07-23 16:19:58.853 v [main] com.puritytech.crawler.xs.XosoMBCrawler, line 62  INFO  :: current date: Tue Jul 23 16:19:58 ICT 2013
+13-07-23 16:20:22.351 v [main] com.puritytech.db.Database, line 68  INFO  :: initialize Database
+13-07-23 16:20:22.602 v [main] com.puritytech.db.Database, line 128  INFO  :: Successfully connect to: com.mysql.jdbc.JDBC4Connection@1cde100
+13-07-23 16:20:22.605 v [main] com.puritytech.crawler.xs.XosoMBCrawler, line 63  INFO  :: current date: Tue Jul 23 16:20:22 ICT 2013
+13-07-23 16:22:44.076 v [main] com.puritytech.db.Database, line 68  INFO  :: initialize Database
+13-07-23 16:22:44.348 v [main] com.puritytech.db.Database, line 128  INFO  :: Successfully connect to: com.mysql.jdbc.JDBC4Connection@1cde100
+13-07-23 16:22:44.350 v [main] com.puritytech.crawler.xs.XosoMBCrawler, line 64  INFO  :: current date: Tue Jul 23 16:22:44 ICT 2013
+13-07-23 16:23:06.533 v [main] com.puritytech.db.Database, line 68  INFO  :: initialize Database
+13-07-23 16:23:06.775 v [main] com.puritytech.db.Database, line 128  INFO  :: Successfully connect to: com.mysql.jdbc.JDBC4Connection@1cde100
+13-07-23 16:23:06.778 v [main] com.puritytech.crawler.xs.XosoMBCrawler, line 64  INFO  :: current date: Tue Jul 23 16:23:06 ICT 2013
+13-07-23 16:28:46.003 v [main] com.puritytech.crawler.xs.XosoMBCrawler, line 47  INFO  :: current date: 2013-07-23
+13-07-23 16:28:46.006 v [main] com.puritytech.crawler.xs.XosoMBCrawler, line 48  INFO  :: 7 day: null
+13-07-23 16:28:46.006 v [main] com.puritytech.crawler.xs.XosoMBCrawler, line 49  INFO  :: 30 day: null
+13-07-23 16:28:46.006 v [main] com.puritytech.crawler.xs.XosoMBCrawler, line 50  INFO  :: 90 day: null
+13-07-23 16:28:46.008 v [main] com.puritytech.db.Database, line 68  INFO  :: initialize Database
+13-07-23 16:28:46.246 v [main] com.puritytech.db.Database, line 128  INFO  :: Successfully connect to: com.mysql.jdbc.JDBC4Connection@16f0472
+13-07-23 16:28:46.248 v [main] com.puritytech.crawler.xs.XosoMBCrawler, line 82  INFO  :: current date: Tue Jul 30 16:28:46 ICT 2013
+13-07-23 16:28:58.069 v [main] com.puritytech.crawler.xs.XosoMBCrawler, line 47  INFO  :: current date: 2013-07-23
+13-07-23 16:28:58.073 v [main] com.puritytech.crawler.xs.XosoMBCrawler, line 48  INFO  :: 7 day: null
+13-07-23 16:28:58.073 v [main] com.puritytech.crawler.xs.XosoMBCrawler, line 49  INFO  :: 30 day: null
+13-07-23 16:28:58.073 v [main] com.puritytech.crawler.xs.XosoMBCrawler, line 50  INFO  :: 90 day: null
+13-07-23 16:28:58.075 v [main] com.puritytech.db.Database, line 68  INFO  :: initialize Database
+13-07-23 16:28:58.317 v [main] com.puritytech.db.Database, line 128  INFO  :: Successfully connect to: com.mysql.jdbc.JDBC4Connection@1cde100
+13-07-23 16:28:58.319 v [main] com.puritytech.crawler.xs.XosoMBCrawler, line 82  INFO  :: current date: Sun Aug 04 16:28:58 ICT 2013
+13-07-23 16:30:23.207 v [main] com.puritytech.crawler.xs.XosoMBCrawler, line 47  INFO  :: current date: 2013-07-23
+13-07-23 16:30:23.210 v [main] com.puritytech.crawler.xs.XosoMBCrawler, line 48  INFO  :: 7 day: null
+13-07-23 16:30:23.211 v [main] com.puritytech.crawler.xs.XosoMBCrawler, line 49  INFO  :: 30 day: null
+13-07-23 16:30:23.212 v [main] com.puritytech.crawler.xs.XosoMBCrawler, line 50  INFO  :: 90 day: null
+13-07-23 16:30:23.213 v [main] com.puritytech.db.Database, line 68  INFO  :: initialize Database
+13-07-23 16:30:23.452 v [main] com.puritytech.db.Database, line 128  INFO  :: Successfully connect to: com.mysql.jdbc.JDBC4Connection@1cde100
+13-07-23 16:30:23.454 v [main] com.puritytech.crawler.xs.XosoMBCrawler, line 83  INFO  :: current date: Thu Jul 04 16:30:23 ICT 2013
+13-07-23 16:30:36.905 v [main] com.puritytech.crawler.xs.XosoMBCrawler, line 47  INFO  :: current date: 2013-07-23
+13-07-23 16:30:36.908 v [main] com.puritytech.crawler.xs.XosoMBCrawler, line 48  INFO  :: 7 day: null
+13-07-23 16:30:36.908 v [main] com.puritytech.crawler.xs.XosoMBCrawler, line 49  INFO  :: 30 day: null
+13-07-23 16:30:36.909 v [main] com.puritytech.crawler.xs.XosoMBCrawler, line 50  INFO  :: 90 day: null
+13-07-23 16:30:36.910 v [main] com.puritytech.db.Database, line 68  INFO  :: initialize Database
+13-07-23 16:30:37.143 v [main] com.puritytech.db.Database, line 128  INFO  :: Successfully connect to: com.mysql.jdbc.JDBC4Connection@1cde100
+13-07-23 16:30:37.146 v [main] com.puritytech.crawler.xs.XosoMBCrawler, line 83  INFO  :: current date: Tue Jul 23 16:30:37 ICT 2013
+13-07-23 16:31:00.384 v [main] com.puritytech.crawler.xs.XosoMBCrawler, line 47  INFO  :: current date: 2013-07-23
+13-07-23 16:31:00.388 v [main] com.puritytech.crawler.xs.XosoMBCrawler, line 48  INFO  :: 7 day: null
+13-07-23 16:31:00.388 v [main] com.puritytech.crawler.xs.XosoMBCrawler, line 49  INFO  :: 30 day: null
+13-07-23 16:31:00.389 v [main] com.puritytech.crawler.xs.XosoMBCrawler, line 50  INFO  :: 90 day: null
+13-07-23 16:31:00.391 v [main] com.puritytech.db.Database, line 68  INFO  :: initialize Database
+13-07-23 16:31:00.639 v [main] com.puritytech.db.Database, line 128  INFO  :: Successfully connect to: com.mysql.jdbc.JDBC4Connection@16f0472
+13-07-23 16:31:00.642 v [main] com.puritytech.crawler.xs.XosoMBCrawler, line 82  INFO  :: current date: Tue Jul 23 16:31:00 ICT 2013
+13-07-23 16:31:00.642 v [main] com.puritytech.crawler.xs.XosoMBCrawler, line 84  INFO  :: 10 date: Tue Jul 02 16:31:00 ICT 2013
+13-07-23 16:31:39.117 v [main] com.puritytech.crawler.xs.XosoMBCrawler, line 47  INFO  :: current date: 2013-07-23
+13-07-23 16:31:39.120 v [main] com.puritytech.crawler.xs.XosoMBCrawler, line 48  INFO  :: 7 day: null
+13-07-23 16:31:39.121 v [main] com.puritytech.crawler.xs.XosoMBCrawler, line 49  INFO  :: 30 day: null
+13-07-23 16:31:39.122 v [main] com.puritytech.crawler.xs.XosoMBCrawler, line 50  INFO  :: 90 day: null
+13-07-23 16:31:39.123 v [main] com.puritytech.db.Database, line 68  INFO  :: initialize Database
+13-07-23 16:31:39.383 v [main] com.puritytech.db.Database, line 128  INFO  :: Successfully connect to: com.mysql.jdbc.JDBC4Connection@1cde100
+13-07-23 16:31:39.386 v [main] com.puritytech.crawler.xs.XosoMBCrawler, line 82  INFO  :: current date: Tue Jul 23 16:31:39 ICT 2013
+13-07-23 16:31:39.387 v [main] com.puritytech.crawler.xs.XosoMBCrawler, line 84  INFO  :: 10 date: Wed Jul 24 16:31:39 ICT 2013
+13-07-23 16:32:44.869 v [main] com.puritytech.crawler.xs.XosoMBCrawler, line 47  INFO  :: current date: 2013-07-23
+13-07-23 16:32:44.871 v [main] com.puritytech.crawler.xs.XosoMBCrawler, line 48  INFO  :: 7 day: null
+13-07-23 16:32:44.872 v [main] com.puritytech.crawler.xs.XosoMBCrawler, line 49  INFO  :: 30 day: null
+13-07-23 16:32:44.872 v [main] com.puritytech.crawler.xs.XosoMBCrawler, line 50  INFO  :: 90 day: null
+13-07-23 16:32:44.873 v [main] com.puritytech.db.Database, line 68  INFO  :: initialize Database
+13-07-23 16:32:45.110 v [main] com.puritytech.db.Database, line 128  INFO  :: Successfully connect to: com.mysql.jdbc.JDBC4Connection@18d107f
+13-07-23 16:32:45.113 v [main] com.puritytech.crawler.xs.XosoMBCrawler, line 82  INFO  :: current date: Sun Jul 21 16:32:45 ICT 2013
+13-07-23 16:32:45.113 v [main] com.puritytech.crawler.xs.XosoMBCrawler, line 84  INFO  :: 10 date: Sun Jul 21 16:32:45 ICT 2013
+13-07-23 16:32:56.832 v [main] com.puritytech.crawler.xs.XosoMBCrawler, line 47  INFO  :: current date: 2013-07-23
+13-07-23 16:32:56.835 v [main] com.puritytech.crawler.xs.XosoMBCrawler, line 48  INFO  :: 7 day: null
+13-07-23 16:32:56.835 v [main] com.puritytech.crawler.xs.XosoMBCrawler, line 49  INFO  :: 30 day: null
+13-07-23 16:32:56.836 v [main] com.puritytech.crawler.xs.XosoMBCrawler, line 50  INFO  :: 90 day: null
+13-07-23 16:32:56.837 v [main] com.puritytech.db.Database, line 68  INFO  :: initialize Database
+13-07-23 16:32:57.070 v [main] com.puritytech.db.Database, line 128  INFO  :: Successfully connect to: com.mysql.jdbc.JDBC4Connection@16f0472
+13-07-23 16:32:57.073 v [main] com.puritytech.crawler.xs.XosoMBCrawler, line 82  INFO  :: current date: Tue Jul 23 16:32:57 ICT 2013
+13-07-23 16:32:57.073 v [main] com.puritytech.crawler.xs.XosoMBCrawler, line 85  INFO  :: 10 date: Sun Jul 21 16:32:57 ICT 2013
+13-07-23 16:33:59.379 v [main] com.puritytech.crawler.xs.XosoMBCrawler, line 51  INFO  :: current date: 2013-07-23
+13-07-23 16:33:59.382 v [main] com.puritytech.crawler.xs.XosoMBCrawler, line 52  INFO  :: 7 day: null
+13-07-23 16:33:59.382 v [main] com.puritytech.crawler.xs.XosoMBCrawler, line 53  INFO  :: 30 day: null
+13-07-23 16:33:59.382 v [main] com.puritytech.crawler.xs.XosoMBCrawler, line 54  INFO  :: 90 day: null
+13-07-23 16:33:59.384 v [main] com.puritytech.db.Database, line 68  INFO  :: initialize Database
+13-07-23 16:33:59.623 v [main] com.puritytech.db.Database, line 128  INFO  :: Successfully connect to: com.mysql.jdbc.JDBC4Connection@18d107f
+13-07-23 16:33:59.625 v [main] com.puritytech.crawler.xs.XosoMBCrawler, line 86  INFO  :: current date: Tue Jul 23 16:33:59 ICT 2013
+13-07-23 16:33:59.626 v [main] com.puritytech.crawler.xs.XosoMBCrawler, line 89  INFO  :: 10 date: Wed Apr 24 16:33:59 ICT 2013
+13-07-23 16:39:58.374 v [main] com.puritytech.crawler.xs.XosoMBCrawler, line 67  INFO  :: current date: 2013-07-23
+13-07-23 16:39:58.377 v [main] com.puritytech.crawler.xs.XosoMBCrawler, line 68  INFO  :: 7 day: 2013-07-16
+13-07-23 16:39:58.377 v [main] com.puritytech.crawler.xs.XosoMBCrawler, line 69  INFO  :: 30 day: 2013-06-23
+13-07-23 16:39:58.377 v [main] com.puritytech.crawler.xs.XosoMBCrawler, line 70  INFO  :: 90 day: 2013-04-24
+13-07-23 16:39:58.379 v [main] com.puritytech.db.Database, line 68  INFO  :: initialize Database
+13-07-23 16:39:58.621 v [main] com.puritytech.db.Database, line 128  INFO  :: Successfully connect to: com.mysql.jdbc.JDBC4Connection@16f0472

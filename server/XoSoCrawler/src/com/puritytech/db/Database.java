@@ -163,6 +163,12 @@ public class Database {
 //		resultSet = preparedStatement.executeQuery();
 	}
 	
+	public void executeQuery(String query) throws SQLException
+	{
+		preparedStatement = connect.prepareStatement(query);
+		preparedStatement.executeUpdate();
+	}
+	
 	public boolean insertToProduct(String sql) {
 		try {
 			statement.executeUpdate(sql);

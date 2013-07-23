@@ -1,0 +1,1 @@
+window._pao.parse({ 'quickresult': 0, 'url': '' });

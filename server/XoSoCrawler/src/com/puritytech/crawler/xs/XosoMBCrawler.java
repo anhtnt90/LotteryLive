@@ -55,6 +55,11 @@ public class XosoMBCrawler extends TimerTask {
 
 	private static final int VALID_XOSO_LENGTH = 27;
 
+
+=======
+	private final static String SEPERATOR = "-"; 
+	
+	
 	long MILLISECS_PER_DAY = 24 * 60 * 60 * 1000;
 
 	private Document doc;
@@ -111,8 +116,13 @@ public class XosoMBCrawler extends TimerTask {
 						String tmp = dateFormat.format(cal.getTime());
 						this.url = url + tmp;
 						this.date = standard.format(cal.getTime());
+
 						logger.info("this.date " + this.date);
-						run();
+						
+						System.out.println("this.date " +this.date);
+						startDB();
+						Processing();
+						stopDB();
 						lastestDate = tmp;
 						cal.add(Calendar.DATE, 1);
 
@@ -208,6 +218,11 @@ public class XosoMBCrawler extends TimerTask {
 			// System.out.println("content start >>>");
 			// //System.out.println(doc.html());
 			// System.out.println("content end >>>");
+			System.out.println("this.url" + this.url);
+		//	doc = Jsoup.parse(new URL(url).openStream(), "UTF-8", url);
+			//System.out.println("content start >>>");
+			//System.out.println(doc.html());
+			//System.out.println("content end >>>");
 			doc.outputSettings().charset("UTF-8");
 
 			logger.info("Create DOM from URL completely...");
@@ -306,6 +321,7 @@ public class XosoMBCrawler extends TimerTask {
 				break;
 			default:
 				break;
+			
 			}
 			logger.debug("counter= " + counter);
 			if (counter != 8) {
@@ -317,12 +333,20 @@ public class XosoMBCrawler extends TimerTask {
 		return sb.toString();
 	}
 
+	
 	public String insertXosoSql(String date, String data) {
-		// data = data.replaceAll("\"", "x");
-		// data = data.replaceAll("x", "\\\"");
-		String sql = "insert into xo_so_truyen_thong_mb (date, result_json) values "
-				+ "(\"" + date + "\", \"" + data + "\")";
-
+//		data = data.replaceAll("\"", "x");
+//		data = data.replaceAll("x", "\\\"");
+		String sql ="";
+		if(!db.CheckRecordExisted(date)){
+			sql= "insert into xo_so_truyen_thong_mb (date, result_json) values " +
+				"(\"" + date + "\", \"" + data + 
+				"\")";
+		}
+		else
+		{
+			sql = "UPDATE xo_so_truyen_thong_mb SET result_json='"+data+"' WHERE date='"+date+"'";
+		}
 		logger.debug(sql);
 		try {
 			db.createPreparedStatement(date, data);
@@ -527,7 +551,7 @@ public class XosoMBCrawler extends TimerTask {
 				SaveConfig();
 			}
 			try {
-				Thread.sleep(1000);
+				Thread.sleep(5000);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				logger.error(e.getMessage(), e);

@@ -138,7 +138,8 @@ public class XosoMBCrawler extends TimerTask {
 		}
 
 		// for today
-		this.url = url + datestr;
+//		this.url = url + datestr;
+		this.url = "http://ketqua.net/xo-so-truyen-thong.php";
 		this.date = standard.format(cal.getTime());
 
 	}
@@ -218,7 +219,7 @@ public class XosoMBCrawler extends TimerTask {
 			// System.out.println("content start >>>");
 			// //System.out.println(doc.html());
 			// System.out.println("content end >>>");
-			System.out.println("this.url" + this.url);
+			//System.out.println("this.url" + this.url);
 		//	doc = Jsoup.parse(new URL(url).openStream(), "UTF-8", url);
 			//System.out.println("content start >>>");
 			//System.out.println(doc.html());
@@ -267,6 +268,7 @@ public class XosoMBCrawler extends TimerTask {
 		StringBuffer sb = new StringBuffer();
 		sb.append('{');
 		int counter = 0;
+		prizes =prizes.replace("&nbsp;", " ");
 		String[] list = prizes.split(SEMICOLON);
 		if (list.length != VALID_XOSO_LENGTH) {
 			System.err.println("failed to parse ket qua xo so");
@@ -286,42 +288,34 @@ public class XosoMBCrawler extends TimerTask {
 			case 2: // DB
 				sb.append("\"B\" : ");
 				sb.append("\"" + list[i] + "\"");
-				break;
-			case 3: // DB
-				sb.append("\"C\" : ");
-				sb.append("\"" + list[i] + ";" + list[++i] + "\"");
-				break;
-			case 4: // DB
-				sb.append("\"D\" : ");
-				sb.append("\"" + list[i] + ";" + list[++i] + ";" + list[++i]
-						+ ";" + list[++i] + ";" + list[++i] + ";" + list[++i]
-						+ "\"");
-				break;
-			case 5: // DB
-				sb.append("\"E\" : ");
-				sb.append("\"" + list[i] + ";" + list[++i] + ";" + list[++i]
-						+ ";" + list[++i] + "\"");
-				break;
-			case 6: // DB
-				sb.append("\"F\" : ");
-				sb.append("\"" + list[i] + ";" + list[++i] + ";" + list[++i]
-						+ ";" + list[++i] + ";" + list[++i] + ";" + list[++i]
-						+ "\"");
-				break;
-
-			case 7: // DB
-				sb.append("\"G\" : ");
-				sb.append("\"" + list[i] + ";" + list[++i] + ";" + list[++i]
-						+ "\"");
-				break;
-			case 8: // DB
-				sb.append("\"H\" : ");
-				sb.append("\"" + list[i] + ";" + list[++i] + ";" + list[++i]
-						+ ";" + list[++i] + "\"");
-				break;
-			default:
-				break;
-			
+					break;
+				case 3: // DB
+					sb.append("\"C\" : ");
+					sb.append("\"" + list[i] + SEPERATOR + list[++i] +"\"");
+					break;
+				case 4: // DB
+					sb.append("\"D\" : ");
+					sb.append("\"" + list[i] + SEPERATOR + list[++i] +SEPERATOR + list[++i] +SEPERATOR + list[++i] +SEPERATOR + list[++i] +SEPERATOR + list[++i] +"\"");
+					break;
+				case 5: // DB
+					sb.append("\"E\" : ");
+					sb.append("\"" + list[i] + SEPERATOR + list[++i] +SEPERATOR + list[++i] + SEPERATOR + list[++i] +"\"");
+					break;
+				case 6: // DB
+					sb.append("\"F\" : ");
+					sb.append("\"" + list[i] + SEPERATOR + list[++i] +SEPERATOR+ list[++i] +SEPERATOR + list[++i] +SEPERATOR + list[++i] +SEPERATOR + list[++i] +"\"");
+					break;
+					
+				case 7: // DB
+					sb.append("\"G\" : ");
+					sb.append("\"" + list[i] + SEPERATOR + list[++i] +SEPERATOR + list[++i] +"\"");
+					break;
+				case 8: // DB
+					sb.append("\"H\" : ");
+					sb.append("\"" + list[i] +SEPERATOR  + list[++i] +SEPERATOR + list[++i] +SEPERATOR + list[++i] +"\"");
+					break;
+				default: 
+					break;
 			}
 			logger.debug("counter= " + counter);
 			if (counter != 8) {
@@ -339,9 +333,7 @@ public class XosoMBCrawler extends TimerTask {
 //		data = data.replaceAll("x", "\\\"");
 		String sql ="";
 		if(!db.CheckRecordExisted(date)){
-			sql= "insert into xo_so_truyen_thong_mb (date, result_json) values " +
-				"(\"" + date + "\", \"" + data + 
-				"\")";
+			sql= "insert into xo_so_truyen_thong_mb (date, result_json) values ('"+date+"','"+data+"')";
 		}
 		else
 		{
@@ -349,7 +341,8 @@ public class XosoMBCrawler extends TimerTask {
 		}
 		logger.debug(sql);
 		try {
-			db.createPreparedStatement(date, data);
+		//	db.createPreparedStatement(date, data);
+			db.executeQuery(sql);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			logger.error(e.getMessage(), e);
@@ -450,9 +443,7 @@ public class XosoMBCrawler extends TimerTask {
 			Document _doc = res.parse();
 
 			_doc.outputSettings().charset("UTF-8");
-			desc = _doc
-					.select("div.main_view > div.main-boxcontFull > div.contents > div > p")
-					.text();
+			desc = _doc.select("div.main_view > div.main-boxcontFull > div.contents > div > p").text();
 		} catch (MalformedURLException e) {
 			// TODO Auto-generated catch block
 			logger.error(e.getMessage(), e);
@@ -695,7 +686,7 @@ public class XosoMBCrawler extends TimerTask {
 
 		date.set(Calendar.HOUR, 6);
 		date.set(Calendar.AM_PM, Calendar.PM);
-		date.set(Calendar.MINUTE, 0);
+	        date.set(Calendar.MINUTE, 10);
 		date.set(Calendar.SECOND, 0);
 		date.set(Calendar.MILLISECOND, 0);
 		// System.out.println("StartTime " + date.getTime());

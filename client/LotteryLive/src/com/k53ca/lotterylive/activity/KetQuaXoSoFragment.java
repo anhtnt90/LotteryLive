@@ -4,6 +4,7 @@ import java.util.List;
 
 import android.content.res.Resources;
 import android.os.AsyncTask;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
@@ -18,7 +19,7 @@ import com.k53ca.lotterylive.utils.Constants;
 import com.k53ca.lotterylive.utils.Constants.TYPE_XOSO;
 
 public class KetQuaXoSoFragment extends MyParentFragment {
-	private static final String TAG = "KetQuaXoSoFragment";
+	private static final String TAG = "KetQauXoSoFragment";
 	// ==========================================================
 	// 9 prizes: special at 0 position, first: 1 position, and so on
 	// ==========================================================
@@ -120,7 +121,8 @@ public class KetQuaXoSoFragment extends MyParentFragment {
 	 * @param date
 	 *            in format: "2011-07-03"
 	 */
-	public void loadKetQua(String date) {
+	private void loadKetQua(String date) {
+		// Load ket qua
 		mDateKetQua = date;
 		new AsyncTask<Void, Void, Void>() {
 
@@ -171,10 +173,10 @@ public class KetQuaXoSoFragment extends MyParentFragment {
 	 */
 	public static KetQuaXoSoFragment newInstance(TYPE_XOSO typeXoso,
 			String dateKetQua) {
-		KetQuaXoSoFragment ketQuaXoSoFragment = new KetQuaXoSoFragment();
-		ketQuaXoSoFragment.setDateKetQua(dateKetQua);
-		ketQuaXoSoFragment.setTypeXoSo(typeXoso);
-		return ketQuaXoSoFragment;
+		KetQuaXoSoFragment ketQauXoSoFragment = new KetQuaXoSoFragment();
+		ketQauXoSoFragment.setDateKetQua(dateKetQua);
+		ketQauXoSoFragment.setTypeXoSo(typeXoso);
+		return ketQauXoSoFragment;
 	}
 
 	public void setTypeXoSo(TYPE_XOSO xosoType) {
@@ -183,5 +185,18 @@ public class KetQuaXoSoFragment extends MyParentFragment {
 
 	public void setDateKetQua(String dateKetQua) {
 		this.mDateKetQua = dateKetQua;
+	}
+
+	/**
+	 * Reload ket qua
+	 * 
+	 * @param date
+	 */
+	public void reloadKetQua(String date) {
+		// Don't load ket qua if date is same as loaded ketqua
+		if (TextUtils.isEmpty(date) || date.equals(mDateKetQua)) {
+			return;
+		}
+		loadKetQua(date);
 	}
 }

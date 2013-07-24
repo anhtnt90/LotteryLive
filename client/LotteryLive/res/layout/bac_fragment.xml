@@ -354,7 +354,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="@string/dau0"
-                    android:textStyle="bold" />
+                    android:textStyle="normal" />
 
                 <View
                     android:layout_width="1dp"
@@ -369,7 +369,7 @@
                     android:gravity="center_horizontal"
                     android:padding="@dimen/daudit_height"
                     android:text="@string/loto"
-                    android:textStyle="bold" />
+                    android:textStyle="normal" />
             </LinearLayout>
 
             <View
@@ -388,7 +388,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="@string/dau1"
-                    android:textStyle="bold" />
+                    android:textStyle="normal" />
 
                 <View
                     android:layout_width="1dp"
@@ -403,7 +403,7 @@
                     android:gravity="center_horizontal"
                     android:padding="@dimen/daudit_height"
                     android:text="@string/loto"
-                    android:textStyle="bold" />
+                    android:textStyle="normal" />
             </LinearLayout>
 
             <View
@@ -422,7 +422,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="@string/dau2"
-                    android:textStyle="bold" />
+                    android:textStyle="normal" />
 
                 <View
                     android:layout_width="1dp"
@@ -437,7 +437,7 @@
                     android:gravity="center_horizontal"
                     android:padding="@dimen/daudit_height"
                     android:text="@string/loto"
-                    android:textStyle="bold" />
+                    android:textStyle="normal" />
             </LinearLayout>
 
             <View
@@ -456,7 +456,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="@string/dau3"
-                    android:textStyle="bold" />
+                    android:textStyle="normal" />
 
                 <View
                     android:layout_width="1dp"
@@ -471,7 +471,7 @@
                     android:gravity="center_horizontal"
                     android:padding="@dimen/daudit_height"
                     android:text="@string/loto"
-                    android:textStyle="bold" />
+                    android:textStyle="normal" />
             </LinearLayout>
 
             <View
@@ -490,7 +490,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="@string/dau4"
-                    android:textStyle="bold" />
+                    android:textStyle="normal" />
 
                 <View
                     android:layout_width="1dp"
@@ -505,7 +505,7 @@
                     android:gravity="center_horizontal"
                     android:padding="@dimen/daudit_height"
                     android:text="@string/loto"
-                    android:textStyle="bold" />
+                    android:textStyle="normal" />
             </LinearLayout>
 
             <View
@@ -524,7 +524,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="@string/dau5"
-                    android:textStyle="bold" />
+                    android:textStyle="normal" />
 
                 <View
                     android:layout_width="1dp"
@@ -539,7 +539,7 @@
                     android:gravity="center_horizontal"
                     android:padding="@dimen/daudit_height"
                     android:text="@string/loto"
-                    android:textStyle="bold" />
+                    android:textStyle="normal" />
             </LinearLayout>
 
             <View
@@ -558,7 +558,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="@string/dau6"
-                    android:textStyle="bold" />
+                    android:textStyle="normal" />
 
                 <View
                     android:layout_width="1dp"
@@ -573,7 +573,7 @@
                     android:gravity="center_horizontal"
                     android:padding="@dimen/daudit_height"
                     android:text="@string/loto"
-                    android:textStyle="bold" />
+                    android:textStyle="normal" />
             </LinearLayout>
 
             <View
@@ -592,7 +592,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="@string/dau7"
-                    android:textStyle="bold" />
+                    android:textStyle="normal" />
 
                 <View
                     android:layout_width="1dp"
@@ -607,7 +607,7 @@
                     android:gravity="center_horizontal"
                     android:padding="@dimen/daudit_height"
                     android:text="@string/loto"
-                    android:textStyle="bold" />
+                    android:textStyle="normal" />
             </LinearLayout>
 
             <View
@@ -626,7 +626,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="@string/dau8"
-                    android:textStyle="bold" />
+                    android:textStyle="normal" />
 
                 <View
                     android:layout_width="1dp"
@@ -641,7 +641,7 @@
                     android:gravity="center_horizontal"
                     android:padding="@dimen/daudit_height"
                     android:text="@string/loto"
-                    android:textStyle="bold" />
+                    android:textStyle="normal" />
             </LinearLayout>
 
             <View
@@ -660,7 +660,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="@string/dau9"
-                    android:textStyle="bold" />
+                    android:textStyle="normal" />
 
                 <View
                     android:layout_width="1dp"
@@ -675,7 +675,7 @@
                     android:gravity="center_horizontal"
                     android:padding="@dimen/daudit_height"
                     android:text="@string/loto"
-                    android:textStyle="bold" />
+                    android:textStyle="normal" />
             </LinearLayout>
 
             <View

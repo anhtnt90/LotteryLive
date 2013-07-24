@@ -12,6 +12,7 @@ import android.util.Log;
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 import com.k53ca.lotterylive.data.KetQuaXoSo;
+import com.k53ca.lotterylive.data.sao.KetQuaGsonHelper.KetQuaFromService;
 import com.k53ca.lotterylive.data.sao.KetQuaGsonHelper.KetQuaGson;
 import com.k53ca.lotterylive.utils.Constants.TYPE_XOSO;
 

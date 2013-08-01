@@ -1,0 +1,16 @@
+13-07-19 09:30:10.013 v [main] aaaaaaaa, line 56  INFO  :: bbbbb
+13-07-19 09:30:10.016 v [main] aaaaaaaa, line 57  INFO  :: bbbbb
+13-07-19 09:30:10.016 v [main] aaaaaaaa, line 58  INFO  :: bbbbb
+13-07-19 09:30:10.016 v [main] aaaaaaaa, line 59  INFO  :: bbbbb
+13-07-19 09:30:10.017 v [main] aaaaaaaa, line 15  DEBUG  :: debuging
+13-07-19 09:30:10.017 v [main] aaaaaaaa, line 16  INFO  :: info
+13-07-19 09:30:10.018 v [main] aaaaaaaa, line 17  WARN  :: warning
+13-07-19 09:30:10.018 v [main] aaaaaaaa, line 18  ERROR  :: error
+13-07-19 09:30:38.498 v [main] aaaaaaaa, line 56  INFO  :: bbbbb
+13-07-19 09:30:38.501 v [main] aaaaaaaa, line 57  INFO  :: bbbbb
+13-07-19 09:30:38.502 v [main] aaaaaaaa, line 58  INFO  :: bbbbb
+13-07-19 09:30:38.502 v [main] aaaaaaaa, line 59  INFO  :: bbbbb
+13-07-19 09:30:38.502 v [main] aaaaaaaa, line 15  DEBUG  :: debuging
+13-07-19 09:30:38.503 v [main] aaaaaaaa, line 16  INFO  :: info
+13-07-19 09:30:38.503 v [main] aaaaaaaa, line 17  WARN  :: warning
+13-07-19 09:30:38.503 v [main] aaaaaaaa, line 18  ERROR  :: error

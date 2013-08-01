@@ -1,0 +1,84 @@
+
+<!-- saved from url=(0208)http://static.novanet.vn/adview.htm?zone=2097&url=http%3A%2F%2Fketqua.net%2F&host=ketqua.net&ref=&hl=3&br=3&brver=28&osname=1&osver=0&width=980&height=90&time=233&nnc=233525338177636&cenable=true&newnnc=false -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<style>
+	div,a,span{margin:0;padding:0;}
+	body{font-family:Tahoma;font-size:11px;margin:0;padding:0;}
+	#adsby-text{display:none;width:80px;float:right;text-align:left;line-height:14px;}
+	#adsby-logo-show{width:12px;height:12px;margin:2px 0 0 6px;float:left;text-align:center;background: url('/HtmlTemplate/logo12x12.png') 0 0 no-repeat;}
+	#adsby-text{width:85px;float:right;}
+	a#adsby-panel{position:absolute; top:0; right:0; text-align:center;padding-top:2px;height:18px; background-color:#ccc;cursor:pointer;border-radius:0 0 0 4px;opacity:0.6;display:block;text-decoration:none;line-height:12px;width:25px;color:#555;-webkit-border-radius:0 0 0 4px;}
+	#wrap-space{position:absolute;top:1px;right:1px;padding-right:10px;padding-top:2px;height:20px;cursor:pointer;width:150px;z-index:9999;}
+	</style>
+</head>
+<body>
+	<div style="width:980;height:90;position:relative;">
+		<a id="adsby-panel" href="javascript:void(0)"><div id="adsby-logo-show"></div><span id="adsby-text">Ads by Novanet</span></a>
+		<a id="wrap-space" href="http://novanet.vn/" target="_blank"></a>
+		<div>
+			<a href="http://novanet.vn/" target="_bank"><img src="980x90.jpg" alt="" width="980" height="90">
+		</a></div><a href="http://novanet.vn/" target="_bank">
+	</a></div><a href="http://novanet.vn/" target="_bank">
+	<script type="text/javascript">
+		var HoverListener = {
+	  addElem: function( elem, callback,outCallback,delay )
+	  {
+		if ( delay === undefined )
+		{
+		  delay = 0;
+		}
+
+		var hoverTimer;
+		addEvent( elem, 'mouseover', function()
+		{
+		  hoverTimer = setTimeout( callback, delay );
+		} );
+
+		addEvent( elem, 'mouseout', function()
+		{
+			setTimeout(outCallback,0);
+		});
+	  }
+	}
+
+	function ShowAdsBy()
+	{
+	  var adsbyText=document.getElementById( 'adsby-text' );
+	  adsbyText.style.display='block';
+	  
+	  var adsbyPanel=document.getElementById( 'adsby-panel' );
+	  adsbyPanel.style.width='110px';
+	}
+	function HideAdsBy()
+	{
+		var adsbyText=document.getElementById( 'adsby-text' );
+		adsbyText.style.display='none';
+		
+		var adsbyPanel=document.getElementById( 'adsby-panel' );
+		adsbyPanel.style.width='25px';
+	}
+	
+	//  Generic event abstractor
+	function addEvent( obj, evt, fn )
+	{
+	  if ( 'undefined' != typeof obj.addEventListener )
+	  {
+		obj.addEventListener( evt, fn, false );
+	  }
+	  else if ( 'undefined' != typeof obj.attachEvent )
+	  {
+		obj.attachEvent( "on" + evt, fn );
+	  }
+	}
+	
+	addEvent( window, 'load', function()
+	{
+	  HoverListener.addElem(
+		document.getElementById( 'wrap-space' )
+		,ShowAdsBy,
+		HideAdsBy
+	  );
+	} );
+	</script>
+
+<div res="advlist is empty - 2"></div></a></body></html>

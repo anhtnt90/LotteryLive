@@ -55,6 +55,8 @@ public class Database {
 	private String dbname;   	// db name
 	private String password;	// password
 	
+	public String table_name = "xo_so_binh_dinh";
+	
 	private Connection connect;
 	private Statement statement;
 	private java.sql.PreparedStatement preparedStatement;
@@ -149,7 +151,7 @@ public class Database {
 	public void createPreparedStatement(String date, String data) throws SQLException {
 		// PreparedStatements can use variables and are more efficient
 		preparedStatement = connect
-				.prepareStatement("insert into xo_so_truyen_thong_mb (date, result_json) values (?, ?)");
+				.prepareStatement("insert into "+table_name+" (date, result_json) values (?, ?)");
 		// "myuser, webpage, datum, summery, COMMENTS from FEEDBACK.COMMENTS");
 		// Parameters start with 1
 		preparedStatement.setString(1, date);
@@ -185,7 +187,7 @@ public class Database {
 	{
 		try {
 			 Statement st = connect.createStatement();
-	         ResultSet res = st.executeQuery("SELECT * FROM xo_so_truyen_thong_mb WHERE date="+date);
+	         ResultSet res = st.executeQuery("SELECT * FROM "+table_name+" WHERE date="+date);
 	        
 			if (res.next()){
 				return true;
@@ -249,7 +251,7 @@ public class Database {
 		// Result set get the result of the SQL query
 	      try {
 			resultSet = statement
-			      .executeQuery("select * from xo_so_truyen_thong_mb");
+			      .executeQuery("select * from "+table_name+"");
 			writeMetaData(resultSet);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

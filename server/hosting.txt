@@ -1,0 +1,34 @@
+Thông tin Hosting :
+
+Tên miền : banvemaybayonline.vn
+Tài khoản : banvemay
+Mật khẩu : 1Du3xl8b5Q
+Loại Hosting : VN Basic Plan
+Database server: db.hostvn.net
+IP Server : 210.245.90.209
+
+Nameserver 1: ns39.hostvn.net
+Nameserver 2: ns40.hostvn.net
+
+Trước khi tên miền được kích hoạt , bạn có thể truy cập website với thông tin dưới đây :
+
+FTP Hostname : 210.245.90.209
+
+Đường dẫn quản lý : http://210.245.90.209:2082
+
+Khi tên miền được kích hoạt , bạn có thể truy cập website với thông tin dưới đây :
+
+FTP Hostname : www.banvemaybayonline.vn
+Đường dẫn Website : http://www.banvemaybayonline.vn
+Đường dẫn quản lý : http://www.banvemaybayonline.vn:2082
+
+Thông tin Email :
+
+Thông tin Email mặc định :
+
+Địa chỉ POP3 Host : mail.banvemaybayonline.vn
+Địa chỉ SMTP Host : mail.banvemaybayonline.vn
+Tài khoản : banvemay
+Mật khẩu : 1Du3xl8b5Q
+
+Chú ý : Tài khoản Email bạn phải điền đầy đủ . VD : username@domain.com

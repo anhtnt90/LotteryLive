@@ -32,21 +32,26 @@
             android:text="Kết quả xổ số"
             android:textColor="@android:color/white"
             android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvDatePick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:text="Chọn ngày"
+            android:textColor="@color/red"
+            android:textStyle="bold" />
     </RelativeLayout>
 
-    <LinearLayout
+    <RelativeLayout
+        android:id="@+id/main_rl_rootfrag"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/layout_logo"
-        android:orientation="horizontal" >
-
-        <fragment
-            android:id="@+id/main_rl_rootfrag"
-            android:name="com.k53ca.lotterylive.activity.MienBacFragment"
-            android:layout_width="match_parent"
-            android:layout_height="fill_parent" >
-        </fragment>
-    </LinearLayout>
+        android:layout_above="@+id/main_ll_buttons"
+        android:layout_below="@+id/layout_logo" >
+    </RelativeLayout>
 
     <LinearLayout
         android:id="@+id/main_ll_buttons"
@@ -98,19 +103,6 @@
             android:text="@string/main_activity_btn3"
             android:textColor="#ffffff"
             android:textStyle="bold" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/main_ll_buttons"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true" >
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#ffffff" />
     </LinearLayout>
 
 </RelativeLayout>

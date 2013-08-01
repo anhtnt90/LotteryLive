@@ -19,5 +19,18 @@
     <string name="six_prize">Giải Sáu</string>
     <string name="seven_prize">Giải Bảy</string>
     <string name="eigh_prize">Giải Tám</string>
+    <string name="loto_tructiep">LôTô trực tiếp</string>
+    <string name="dau">Đầu</string>
+    <string name="loto">LôTô</string>
+    <string name="dau0">0</string>
+    <string name="dau1">1</string>
+    <string name="dau2">2</string>
+    <string name="dau3">3</string>
+    <string name="dau4">4</string>
+    <string name="dau5">5</string>
+    <string name="dau6">6</string>
+    <string name="dau7">7</string>
+    <string name="dau8">8</string>
+    <string name="dau9">9</string>
 
 </resources>

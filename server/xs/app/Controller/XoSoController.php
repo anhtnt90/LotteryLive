@@ -22,7 +22,7 @@ class XoSoController extends AppController {
      * An array containing the class names of models this controller uses.
      * @var array 
      */
-    public $uses = array('XoSoMB');
+    public $uses = array('XoSoMB', 'XoSoMT', 'XoSoMN');
     
      /**
      * Component
@@ -38,12 +38,36 @@ class XoSoController extends AppController {
     }
     
     public function mienbac() {
-        $this->layout = null;
+        $this->layout = false;
         $params = $this->getRequestParams();
 //        var_dump($this->getRequestParams());
         $jsonData = array();
         if(isset($params['date'])) {
             $jsonData = $this->AppLogic->getXosoMBByDate($params['date'], $this->XoSoMB);
+        } 
+        
+        $this->set(compact('jsonData'));
+    }
+    
+    public function mientrung() {
+        $this->layout = false;
+        $params = $this->getRequestParams();
+//        var_dump($this->getRequestParams());
+        $jsonData = array();
+        if(isset($params['date'])) {
+            $jsonData = $this->AppLogic->getXosoMBByDate($params['date'], $this->XoSoMT);
+        } 
+        
+        $this->set(compact('jsonData'));
+    }
+    
+    public function miennam() {
+        $this->layout = false;
+        $params = $this->getRequestParams();
+//        var_dump($this->getRequestParams());
+        $jsonData = array();
+        if(isset($params['date'])) {
+            $jsonData = $this->AppLogic->getXosoMBByDate($params['date'], $this->XoSoMN);
         } 
         
         $this->set(compact('jsonData'));

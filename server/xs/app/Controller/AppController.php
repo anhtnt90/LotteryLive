@@ -34,7 +34,6 @@ App::uses('Controller', 'Controller');
 class AppController extends Controller {
     
     public function getRequestParams() {
-		$this->layout = null ;
         return $this->params->query;
     }
 }

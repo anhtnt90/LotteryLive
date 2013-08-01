@@ -53,8 +53,8 @@ public class XosoMBCrawler extends TimerTask {
 
 	private final static String SEMICOLON = ";";
 
-	private static final int VALID_XOSO_LENGTH = 27;
-
+//	private static final int VALID_XOSO_LENGTH = 27;	//mien bac truyen thong
+	private static final int VALID_XOSO_LENGTH = 18;	//mien trung
 
 
 	private final static String SEPERATOR = "-"; 
@@ -67,6 +67,8 @@ public class XosoMBCrawler extends TimerTask {
 	private static final String ConfigFile = "config.txt";
 
 	static boolean isFulldata = true;
+	private static String MAIN_URL ="http://ketqua.net/xo-so-binh-dinh.php?ngay=";
+	boolean PROXY = true;
 
 	public XosoMBCrawler(String url, int category, int loc, char masterSt) {
 		this.url = url;
@@ -88,7 +90,7 @@ public class XosoMBCrawler extends TimerTask {
 	}
 
 	public XosoMBCrawler() {
-		String url = "http://ketqua.net/xo-so-truyen-thong.php?ngay="; // tech
+		String url =  MAIN_URL;// tech
 
 		Calendar cal = Calendar.getInstance();
 		DateFormat standard = new SimpleDateFormat("yyyy-MM-dd");
@@ -102,11 +104,13 @@ public class XosoMBCrawler extends TimerTask {
 		this.numItem = 0;
 
 		if (lastestDate == "") {
-
+			
 			GetLastestDateFromFile();
+			logger.info("lastestDate " + lastestDate + " " +datestr);
 			try {
 				Date date = dateFormat.parse(lastestDate);
 				Date today = dateFormat.parse(datestr);
+				
 				long days = (today.getTime() - date.getTime())
 						/ MILLISECS_PER_DAY;
 				logger.info("diff days " + days);
@@ -114,15 +118,17 @@ public class XosoMBCrawler extends TimerTask {
 					cal.add(Calendar.DATE, -((int) days - 1));
 					for (int i = 1; i < days; i++) {
 						String tmp = dateFormat.format(cal.getTime());
-						this.url = url + tmp;
-						this.date = standard.format(cal.getTime());
-
-						logger.info("this.date " + this.date);
-						
-						System.out.println("this.date " +this.date);
-						startDB();
-						Processing();
-						stopDB();
+						if(cal.get(Calendar.DAY_OF_WEEK)==Calendar.THURSDAY){	//binh dinh mo thuong thu 5
+							this.url = url + tmp;
+							this.date = standard.format(cal.getTime());
+	
+							logger.info("this.date " + this.date);
+							
+							System.out.println("this.date " +this.date);
+							startDB();
+							Processing();
+							stopDB();
+						}
 						lastestDate = tmp;
 						cal.add(Calendar.DATE, 1);
 
@@ -210,8 +216,10 @@ public class XosoMBCrawler extends TimerTask {
 			// Jsoup.connect(this.url).cookie("mc_cityMC",
 			// this.cookie).timeout(TIME_OUT).execute();
 			// doc = res.parse();
+			if(PROXY){
 			System.setProperty("http.proxyHost", "proxy.han.gameloft.org");
 			System.setProperty("http.proxyPort", "3128");
+			}
 			doc = Jsoup.connect(this.url).userAgent("Mozilla")
 					.timeout(TIME_OUT).get();
 			logger.info("this.url" + this.url);
@@ -271,8 +279,8 @@ public class XosoMBCrawler extends TimerTask {
 		prizes =prizes.replace("&nbsp;", " ");
 		String[] list = prizes.split(SEMICOLON);
 		if (list.length != VALID_XOSO_LENGTH) {
-			System.err.println("failed to parse ket qua xo so");
-			return null;
+			System.err.println("failed to parse ket qua xo so "+list.length);
+	//		return null;
 		}
 		for (int i = 0; i < list.length; i++) {
 			counter++;
@@ -291,28 +299,28 @@ public class XosoMBCrawler extends TimerTask {
 					break;
 				case 3: // DB
 					sb.append("\"C\" : ");
-					sb.append("\"" + list[i] + SEPERATOR + list[++i] +"\"");
+					sb.append("\"" + list[i] +"\"");
 					break;
 				case 4: // DB
 					sb.append("\"D\" : ");
-					sb.append("\"" + list[i] + SEPERATOR + list[++i] +SEPERATOR + list[++i] +SEPERATOR + list[++i] +SEPERATOR + list[++i] +SEPERATOR + list[++i] +"\"");
+					sb.append("\"" + list[i] + SEPERATOR + list[++i]+"\"");
 					break;
 				case 5: // DB
 					sb.append("\"E\" : ");
-					sb.append("\"" + list[i] + SEPERATOR + list[++i] +SEPERATOR + list[++i] + SEPERATOR + list[++i] +"\"");
+					sb.append("\"" + list[i] + SEPERATOR + list[++i] +SEPERATOR + list[++i] + SEPERATOR + list[++i] + SEPERATOR + list[++i]+ SEPERATOR + list[++i]+ SEPERATOR + list[++i]+"\"");
 					break;
 				case 6: // DB
 					sb.append("\"F\" : ");
-					sb.append("\"" + list[i] + SEPERATOR + list[++i] +SEPERATOR+ list[++i] +SEPERATOR + list[++i] +SEPERATOR + list[++i] +SEPERATOR + list[++i] +"\"");
+					sb.append("\"" + list[i]  +"\"");
 					break;
 					
 				case 7: // DB
 					sb.append("\"G\" : ");
-					sb.append("\"" + list[i] + SEPERATOR + list[++i] +SEPERATOR + list[++i] +"\"");
+					sb.append("\"" + list[i]+"\"");
 					break;
 				case 8: // DB
 					sb.append("\"H\" : ");
-					sb.append("\"" + list[i] +SEPERATOR  + list[++i] +SEPERATOR + list[++i] +SEPERATOR + list[++i] +"\"");
+					sb.append("\"" + list[i]+"\"");
 					break;
 				default: 
 					break;
@@ -332,12 +340,13 @@ public class XosoMBCrawler extends TimerTask {
 //		data = data.replaceAll("\"", "x");
 //		data = data.replaceAll("x", "\\\"");
 		String sql ="";
+		String table_name = db.table_name;
 		if(!db.CheckRecordExisted(date)){
-			sql= "insert into xo_so_truyen_thong_mb (date, result_json) values ('"+date+"','"+data+"')";
+			sql= "insert into "+table_name+" (date, result_json) values ('"+date+"','"+data+"')";
 		}
 		else
 		{
-			sql = "UPDATE xo_so_truyen_thong_mb SET result_json='"+data+"' WHERE date='"+date+"'";
+			sql = "UPDATE "+table_name+" SET result_json='"+data+"' WHERE date='"+date+"'";
 		}
 		logger.debug(sql);
 		try {
@@ -530,6 +539,7 @@ public class XosoMBCrawler extends TimerTask {
 	}
 
 	public void run() {
+		/* rem for offline crawler only, need to fix for online
 		Calendar cal = Calendar.getInstance();
 		isFulldata = false;
 		while (!isFulldata && cal.get(Calendar.HOUR_OF_DAY)<19) {
@@ -548,7 +558,7 @@ public class XosoMBCrawler extends TimerTask {
 				// TODO Auto-generated catch block
 				logger.error(e.getMessage(), e);
 			}
-		}
+		}	*/
 	}
 
 	public void stopDB() {
@@ -681,7 +691,7 @@ public class XosoMBCrawler extends TimerTask {
 	 */
 	public static void main(String[] args) throws MalformedURLException {
 		// TODO Auto-generated method stub
-
+		new XosoMBCrawler();
 		Timer timer = new Timer();
 		Calendar date = Calendar.getInstance();
 
@@ -691,7 +701,7 @@ public class XosoMBCrawler extends TimerTask {
 		date.set(Calendar.SECOND, 0);
 		date.set(Calendar.MILLISECOND, 0);
 		// System.out.println("StartTime " + date.getTime());
-		timer.schedule(new XosoMBCrawler(), date.getTime(), 1000 * 60 * 60 * 24);
+	//	timer.schedule(new XosoMBCrawler(), date.getTime(), 1000 * 60 * 60 * 24);
 
 	}
 

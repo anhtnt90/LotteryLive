@@ -144,8 +144,8 @@ public class XosoMBCrawler extends TimerTask {
 		}
 
 		// for today
-//		this.url = url + datestr;
-		this.url = "http://ketqua.net/xo-so-truyen-thong.php";
+		this.url = url + datestr;
+	//	this.url = "http://ketqua.net/xo-so-truyen-thong.php";
 		this.date = standard.format(cal.getTime());
 
 	}
@@ -316,17 +316,21 @@ public class XosoMBCrawler extends TimerTask {
 					
 				case 7: // DB
 					sb.append("\"G\" : ");
-					sb.append("\"" + list[i]+"\"");
+					sb.append("\"" + list[i]+ SEPERATOR + list[++i] +SEPERATOR + list[++i]+"\"");
 					break;
 				case 8: // DB
 					sb.append("\"H\" : ");
+					sb.append("\"" + list[i]+"\"");
+					break;
+				case 9: // DB
+					sb.append("\"I\" : ");
 					sb.append("\"" + list[i]+"\"");
 					break;
 				default: 
 					break;
 			}
 			logger.debug("counter= " + counter);
-			if (counter != 8) {
+			if (counter != 9) {
 				sb.append(",");
 			}
 

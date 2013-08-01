@@ -319,7 +319,7 @@ public class XosoMBCrawler extends TimerTask {
 			}
 			logger.debug("counter= " + counter);
 			if (counter != 8) {
-				sb.append(",");
+				sb.append(SEPERATOR);
 			}
 
 		}

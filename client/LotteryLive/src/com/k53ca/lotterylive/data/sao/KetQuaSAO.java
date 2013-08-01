@@ -56,18 +56,28 @@ public class KetQuaSAO {
 			Gson gson = new Gson();
 			KetQuaGson ketQuaGson = gson.fromJson(respond, KetQuaGson.class);
 			ketQuaXoSo = new KetQuaXoSo();
+			String oldChar = ";";
+			String newChar = " - ";
 			ketQuaXoSo.setDate(ketQuaGson.date);
 			ketQuaXoSo.setServiceId(ketQuaGson.id);
 			ketQuaXoSo.setVung(type.ordinal());
 			ketQuaXoSo.setGiaiDacBiet(ketQuaGson.giai.dacBiet);
-			ketQuaXoSo.setGiaiNhat(ketQuaGson.giai.nhat);
-			ketQuaXoSo.setGiaiNhi(ketQuaGson.giai.nhi);
-			ketQuaXoSo.setGiaiBa(ketQuaGson.giai.ba);
-			ketQuaXoSo.setGiaiTu(ketQuaGson.giai.tu);
-			ketQuaXoSo.setGiaiNam(ketQuaGson.giai.nam);
-			ketQuaXoSo.setGiaiSau(ketQuaGson.giai.sau);
-			ketQuaXoSo.setGiaiBay(ketQuaGson.giai.bay);
-			ketQuaXoSo.setGiaiTam(ketQuaGson.giai.tam);
+			ketQuaXoSo.setGiaiNhat(ketQuaGson.giai.nhat.replace(oldChar,
+					newChar));
+			ketQuaXoSo
+					.setGiaiNhi(ketQuaGson.giai.nhi.replace(oldChar, newChar));
+			ketQuaXoSo.setGiaiBa(ketQuaGson.giai.ba.replace(oldChar, newChar));
+			ketQuaXoSo.setGiaiTu(ketQuaGson.giai.tu.replace(oldChar, newChar));
+			ketQuaXoSo
+					.setGiaiNam(ketQuaGson.giai.nam.replace(oldChar, newChar));
+			ketQuaXoSo
+					.setGiaiSau(ketQuaGson.giai.sau.replace(oldChar, newChar));
+			ketQuaXoSo
+					.setGiaiBay(ketQuaGson.giai.bay.replace(oldChar, newChar));
+			if (ketQuaGson.giai.tam != null) {
+				ketQuaXoSo.setGiaiTam(ketQuaGson.giai.tam.replace(oldChar,
+						newChar));
+			}
 		} catch (JsonSyntaxException e) {
 			e.printStackTrace();
 		}

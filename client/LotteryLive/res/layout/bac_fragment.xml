@@ -1,298 +1,689 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@android:color/white"
-    android:orientation="vertical" >
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical" >
-
-        <TextView
-            android:id="@+id/tvXoSoType"
-            style="@style/red_text_bold"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:gravity="center_horizontal"
-            android:text="@string/firsttab_xosomienbac" />
-
-        <TextView
-            android:id="@+id/tvDate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:text="Thứ/Ngày Tháng Năm" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/boder3"
+        android:background="@android:color/white"
         android:orientation="vertical" >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#FAF0E6"
-            android:orientation="horizontal" >
+            android:orientation="vertical" >
 
             <TextView
-                android:layout_width="70dp"
+                android:id="@+id/tvXoSoType"
+                style="@style/red_text_bold"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:text="@string/giai_dac_biet"
-                android:textStyle="bold" />
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:text="@string/firsttab_xosomienbac" />
+
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Thứ/Ngày Tháng Năm" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical" >
 
             <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:layout_marginRight="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/boder_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FAF0E6"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="@dimen/column1"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/giai_dac_biet"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/boder_color" />
+
+                <TextView
+                    android:id="@+id/prize0"
+                    style="@style/red_text_bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/ketqua_height"
+                    android:text="00000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="@dimen/column1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/giai_nhat" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/boder_color" />
+
+                <TextView
+                    android:id="@+id/prize1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/ketqua_height"
+                    android:text="00000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FAF0E6"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="@dimen/column1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/second_prize" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/boder_color" />
+
+                <TextView
+                    android:id="@+id/prize2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/ketqua_height"
+                    android:text="00000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="@dimen/column1"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/third_prize" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/boder_color" />
+
+                <TextView
+                    android:id="@+id/prize3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/ketqua_height"
+                    android:text="00000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FAF0E6"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="@dimen/column1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/fourth_prize" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/boder_color" />
+
+                <TextView
+                    android:id="@+id/prize4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/ketqua_height"
+                    android:text="00000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="@dimen/column1"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/five_prize" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/boder_color" />
+
+                <TextView
+                    android:id="@+id/prize5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:text="00000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FAF0E6"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="@dimen/column1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/six_prize" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/boder_color" />
+
+                <TextView
+                    android:id="@+id/prize6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/ketqua_height"
+                    android:text="00000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="@dimen/column1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/seven_prize" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/boder_color" />
+
+                <TextView
+                    android:id="@+id/prize7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/ketqua_height"
+                    android:text="00000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/eightPrizeRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="@dimen/column1"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="@string/eigh_prize"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/boder_color" />
+
+                <TextView
+                    android:id="@+id/prize8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="5dp"
+                    android:text="00000" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
                 android:background="@color/boder_color" />
 
             <TextView
-                android:id="@+id/prize0"
                 style="@style/red_text_bold"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:padding="5dp"
-                android:text="00000" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#FFFFFF"
-            android:orientation="horizontal" >
-
-            <TextView
-                android:layout_width="70dp"
-                android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:text="@string/giai_nhat"
-                android:textStyle="bold" />
+                android:text="@string/loto_tructiep" />
 
             <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:layout_marginRight="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
                 android:background="@color/boder_color" />
 
-            <TextView
-                android:id="@+id/prize1"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:padding="5dp"
-                android:text="00000" />
-        </LinearLayout>
+                android:background="#D5EDF8"
+                android:orientation="horizontal" >
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#FAF0E6"
-            android:orientation="horizontal" >
+                <TextView
+                    android:layout_width="@dimen/column1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/dau"
+                    android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="70dp"
-                android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:text="@string/second_prize"
-                android:textStyle="bold" />
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/boder_color" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/daudit_height"
+                    android:text="@string/loto"
+                    android:textStyle="bold" />
+            </LinearLayout>
 
             <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:layout_marginRight="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
                 android:background="@color/boder_color" />
 
-            <TextView
-                android:id="@+id/prize2"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:padding="5dp"
-                android:text="00000" />
-        </LinearLayout>
+                android:background="#FFFFFF"
+                android:orientation="horizontal" >
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#FFFFFF"
-            android:orientation="horizontal" >
+                <TextView
+                    android:layout_width="@dimen/column1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/dau0"
+                    android:textStyle="normal" />
 
-            <TextView
-                android:layout_width="70dp"
-                android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:text="@string/third_prize"
-                android:textStyle="bold" />
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/boder_color" />
+
+                <TextView
+                    android:id="@+id/dit0"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/daudit_height"
+                    android:text="@string/loto"
+                    android:textStyle="normal" />
+            </LinearLayout>
 
             <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:layout_marginRight="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
                 android:background="@color/boder_color" />
 
-            <TextView
-                android:id="@+id/prize3"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:padding="5dp"
-                android:text="00000" />
-        </LinearLayout>
+                android:background="#FFFFFF"
+                android:orientation="horizontal" >
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#FAF0E6"
-            android:orientation="horizontal" >
+                <TextView
+                    android:layout_width="@dimen/column1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/dau1"
+                    android:textStyle="normal" />
 
-            <TextView
-                android:layout_width="70dp"
-                android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:text="@string/fourth_prize"
-                android:textStyle="bold" />
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/boder_color" />
+
+                <TextView
+                    android:id="@+id/dit1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/daudit_height"
+                    android:text="@string/loto"
+                    android:textStyle="normal" />
+            </LinearLayout>
 
             <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:layout_marginRight="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
                 android:background="@color/boder_color" />
 
-            <TextView
-                android:id="@+id/prize4"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:padding="5dp"
-                android:text="00000" />
-        </LinearLayout>
+                android:background="#FFFFFF"
+                android:orientation="horizontal" >
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#FFFFFF"
-            android:orientation="horizontal" >
+                <TextView
+                    android:layout_width="@dimen/column1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/dau2"
+                    android:textStyle="normal" />
 
-            <TextView
-                android:layout_width="70dp"
-                android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:text="@string/five_prize"
-                android:textStyle="bold" />
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/boder_color" />
+
+                <TextView
+                    android:id="@+id/dit2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/daudit_height"
+                    android:text="@string/loto"
+                    android:textStyle="normal" />
+            </LinearLayout>
 
             <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:layout_marginRight="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
                 android:background="@color/boder_color" />
 
-            <TextView
-                android:id="@+id/prize5"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:padding="5dp"
-                android:text="00000" />
-        </LinearLayout>
+                android:background="#FFFFFF"
+                android:orientation="horizontal" >
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#FAF0E6"
-            android:orientation="horizontal" >
+                <TextView
+                    android:layout_width="@dimen/column1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/dau3"
+                    android:textStyle="normal" />
 
-            <TextView
-                android:layout_width="70dp"
-                android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:text="@string/six_prize"
-                android:textStyle="bold" />
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/boder_color" />
+
+                <TextView
+                    android:id="@+id/dit3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/daudit_height"
+                    android:text="@string/loto"
+                    android:textStyle="normal" />
+            </LinearLayout>
 
             <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:layout_marginRight="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
                 android:background="@color/boder_color" />
 
-            <TextView
-                android:id="@+id/prize6"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:padding="5dp"
-                android:text="00000" />
-        </LinearLayout>
+                android:background="#FFFFFF"
+                android:orientation="horizontal" >
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#FFFFFF"
-            android:orientation="horizontal" >
+                <TextView
+                    android:layout_width="@dimen/column1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/dau4"
+                    android:textStyle="normal" />
 
-            <TextView
-                android:layout_width="70dp"
-                android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:text="@string/seven_prize"
-                android:textStyle="bold" />
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/boder_color" />
+
+                <TextView
+                    android:id="@+id/dit4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/daudit_height"
+                    android:text="@string/loto"
+                    android:textStyle="normal" />
+            </LinearLayout>
 
             <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:layout_marginRight="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
                 android:background="@color/boder_color" />
 
-            <TextView
-                android:id="@+id/prize7"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:padding="5dp"
-                android:text="00000" />
-        </LinearLayout>
+                android:background="#FFFFFF"
+                android:orientation="horizontal" >
 
-        <LinearLayout
-            android:id="@+id/eightPrizeRow"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#FFFFFF"
-            android:orientation="horizontal"
-            android:visibility="gone" >
+                <TextView
+                    android:layout_width="@dimen/column1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/dau5"
+                    android:textStyle="normal" />
 
-            <TextView
-                android:layout_width="70dp"
-                android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:text="@string/eigh_prize"
-                android:textStyle="bold" />
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/boder_color" />
+
+                <TextView
+                    android:id="@+id/dit5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/daudit_height"
+                    android:text="@string/loto"
+                    android:textStyle="normal" />
+            </LinearLayout>
 
             <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:layout_marginRight="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
                 android:background="@color/boder_color" />
 
-            <TextView
-                android:id="@+id/prize8"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:padding="5dp"
-                android:text="00000" />
-        </LinearLayout>
+                android:background="#FFFFFF"
+                android:orientation="horizontal" >
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="@color/boder_color" />
+                <TextView
+                    android:layout_width="@dimen/column1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/dau6"
+                    android:textStyle="normal" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/boder_color" />
+
+                <TextView
+                    android:id="@+id/dit6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/daudit_height"
+                    android:text="@string/loto"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/boder_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="@dimen/column1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/dau7"
+                    android:textStyle="normal" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/boder_color" />
+
+                <TextView
+                    android:id="@+id/dit7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/daudit_height"
+                    android:text="@string/loto"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/boder_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="@dimen/column1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/dau8"
+                    android:textStyle="normal" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/boder_color" />
+
+                <TextView
+                    android:id="@+id/dit8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/daudit_height"
+                    android:text="@string/loto"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/boder_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="@dimen/column1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/dau9"
+                    android:textStyle="normal" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/boder_color" />
+
+                <TextView
+                    android:id="@+id/dit9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/daudit_height"
+                    android:text="@string/loto"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="30dp"
+                android:background="@color/boder_color" />
+        </LinearLayout>
     </LinearLayout>
 
-</LinearLayout>
+</ScrollView>

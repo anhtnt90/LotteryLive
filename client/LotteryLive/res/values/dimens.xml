@@ -2,5 +2,7 @@
 
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="menubar_heigh">50dp</dimen>
-
+ <dimen name="daudit_height">5dp</dimen>
+ <dimen name="ketqua_height">6dp</dimen>
+ <dimen name="column1">85dp</dimen>
 </resources>

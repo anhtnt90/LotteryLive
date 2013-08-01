@@ -1,8 +1,13 @@
 package com.k53ca.lotterylive.activity;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 import android.content.res.Resources;
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.text.TextUtils;
 import android.util.Log;
@@ -24,6 +29,7 @@ public class KetQuaXoSoFragment extends MyParentFragment {
 	// 9 prizes: special at 0 position, first: 1 position, and so on
 	// ==========================================================
 	private TextView prizes[] = new TextView[9];
+	private TextView headTailTextView[] = new TextView[10];
 	// 8th prize (not available in xo so mien bac)
 	private View row8Prize;
 	private TextView tvXoSoType;
@@ -72,6 +78,11 @@ public class KetQuaXoSoFragment extends MyParentFragment {
 					context.getPackageName());
 			prizes[i] = (TextView) view.findViewById(id);
 		}
+		for (int i = 0; i < 10; i++) {
+			int id = resources.getIdentifier("dit" + i, "id",
+					context.getPackageName());
+			headTailTextView[i] = (TextView) view.findViewById(id);
+		}
 	}
 
 	/**
@@ -113,6 +124,44 @@ public class KetQuaXoSoFragment extends MyParentFragment {
 		prizes[6].setText(mKetQuaXoSo.getGiaiSau());
 		prizes[7].setText(mKetQuaXoSo.getGiaiBay());
 		prizes[8].setText("" + mKetQuaXoSo.getGiaiTam());
+		displayHeadTail();
+	}
+
+	public void displayHeadTail() {
+		HeadTailStatis ht = new HeadTailStatis();
+		String splitString = " - ";
+		String[] giaiDacBiet = mKetQuaXoSo.getGiaiDacBiet().split(splitString);
+		String[] giaiNhat = mKetQuaXoSo.getGiaiNhat().split(splitString);
+		String[] giaiNhi = mKetQuaXoSo.getGiaiNhi().split(splitString);
+		String[] giaiBa = mKetQuaXoSo.getGiaiBa().split(splitString);
+		String[] giaiTu = mKetQuaXoSo.getGiaiTu().split(splitString);
+		String[] giaiNam = mKetQuaXoSo.getGiaiNam().split(splitString);
+		String[] giaiSau = mKetQuaXoSo.getGiaiSau().split(splitString);
+		String[] giaiBay = mKetQuaXoSo.getGiaiBay().split(splitString);
+		List<String> prizeList = new ArrayList<String>();
+		Collections.addAll(prizeList, giaiDacBiet);
+		Collections.addAll(prizeList, giaiNhat);
+		Collections.addAll(prizeList, giaiNhi);
+		Collections.addAll(prizeList, giaiBa);
+		Collections.addAll(prizeList, giaiTu);
+		Collections.addAll(prizeList, giaiNam);
+		Collections.addAll(prizeList, giaiSau);
+		Collections.addAll(prizeList, giaiBay);
+		ht.getStatistic(getSortList(prizeList));
+		List<List<Integer>> headTail = new ArrayList<List<Integer>>();
+		headTail = ht.getHt();
+		for (int i = 0; i < 10; i++) {
+			List<Integer> l = headTail.get(i);
+			StringBuilder sb = new StringBuilder();
+			for (int j = 0; j < l.size(); j++) {
+				sb.append(i + "" + l.get(j) + "; ");
+			}
+			if (sb.length() > 0) {
+				headTailTextView[i].setText(sb.substring(0, sb.length() - 2));
+			} else {
+				headTailTextView[i].setText("");
+			}
+		}
 	}
 
 	/**
@@ -198,5 +247,20 @@ public class KetQuaXoSoFragment extends MyParentFragment {
 			return;
 		}
 		loadKetQua(date);
+	}
+
+	public List<String> getSortList(List<String> prizeList) {
+		List<Integer> numList = new ArrayList<Integer>();
+		List<String> stringList = new ArrayList<String>();
+		for (String element : prizeList) {
+			int prize = Integer
+					.valueOf(element.substring(element.length() - 2));
+			numList.add(prize);
+		}
+		Collections.sort(numList);
+		for (Integer num : numList) {
+			stringList.add(num < 10 ? "0" + num : num + "");
+		}
+		return stringList;
 	}
 }

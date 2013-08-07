@@ -1,17 +1,15 @@
 package com.k53ca.lotterylive.activity;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
 import android.content.res.Resources;
-import android.graphics.Color;
 import android.os.AsyncTask;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.k53ca.lotterylive.R;
@@ -24,7 +22,7 @@ import com.k53ca.lotterylive.utils.Constants;
 import com.k53ca.lotterylive.utils.Constants.TYPE_XOSO;
 
 public class KetQuaXoSoFragment extends MyParentFragment {
-	private static final String TAG = "KetQauXoSoFragment";
+	private static final String TAG = "KetQuaXoSoFragment";
 	// ==========================================================
 	// 9 prizes: special at 0 position, first: 1 position, and so on
 	// ==========================================================
@@ -34,6 +32,7 @@ public class KetQuaXoSoFragment extends MyParentFragment {
 	private View row8Prize;
 	private TextView tvXoSoType;
 	private TextView tvDate;
+	protected ProgressBar mProgress;
 
 	// Loai xo so
 	private TYPE_XOSO mTypeXoSo = TYPE_XOSO.MIEN_BAC;
@@ -57,6 +56,7 @@ public class KetQuaXoSoFragment extends MyParentFragment {
 		row8Prize = view.findViewById(R.id.eightPrizeRow);
 		tvDate = (TextView) view.findViewById(R.id.tvDate);
 		tvXoSoType = (TextView) view.findViewById(R.id.tvXoSoType);
+		// mProgress = (ProgressBar) view.findViewById(R.id.progress_bar);
 		displayXoSoType();
 		loadKetQua(mDateKetQua);
 	}
@@ -174,6 +174,18 @@ public class KetQuaXoSoFragment extends MyParentFragment {
 		// Load ket qua
 		mDateKetQua = date;
 		new AsyncTask<Void, Void, Void>() {
+
+			/*
+			 * (non-Javadoc)
+			 * 
+			 * @see android.os.AsyncTask#onPreExecute()
+			 */
+			@Override
+			protected void onPreExecute() {
+				// TODO Auto-generated method stub
+				super.onPreExecute();
+				// mProgress.setVisibility(View.VISIBLE);
+			}
 
 			@Override
 			protected Void doInBackground(Void... params) {
